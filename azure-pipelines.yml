@@ -25,8 +25,8 @@ jobs:
     vmImage: 'Ubuntu 16.04'
   steps:
     - script: |
-        apt-get update
-        apt-get install wget unzip
+        sudo apt-get update
+        sudo apt-get install wget unzip
         wget -O caddy-windows.zip https://caddyserver.com/download/windows/amd64?plugins=docker,http.cache,http.locale,http.minify,http.prometheus,http.proxyprotocol,http.ratelimit,http.realip,http.reauth,http.s3browser,tls.dns.cloudflare,tls.dns.digitalocean,tls.dns.namecheap&license=personal&telemetry=off
         unzip caddy-windows.zip
       workingDirectory: '/tmp'
