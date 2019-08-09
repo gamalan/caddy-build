@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+variables:
+  dockerId: gamalan  
+  imageName: caddy-docker
+  version: 0.1.0
+
+jobs:
+- job: Build_Images_Linux
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  steps:
+    - script: |
+        docker build -t $(dockerId)/$(imageName):$(version) -f Dockerfile .
+        docker build -t $(dockerId)/$(imageName):$(version)-alpine -f Dockerfile-alpine .
+        docker login -u $(dockerId) -p $(pswd)
+        docker push $(dockerId)/$(imageName):$(version)
+        docker push $(dockerId)/$(imageName):$(version)-alpine
+      env:
+        pswd: $(dockerPassword)
+
