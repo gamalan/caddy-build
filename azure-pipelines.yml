@@ -20,18 +20,14 @@ jobs:
         docker push $(dockerId)/$(imageName):$(version)
         docker push $(dockerId)/$(imageName):$(version)-alpine
 
-- job: Download_Windows_Binary
+- job: Build_Windows_Binary
   pool:
-    vmImage: 'Ubuntu 16.04'
+    vmImage: 'win1803'
   steps:
     - script: |
-        sudo apt-get update
-        sudo apt-get install wget unzip
-        wget -O caddy-windows.zip https://caddyserver.com/download/windows/amd64?plugins=docker,http.cache,http.locale,http.minify,http.prometheus,http.proxyprotocol,http.ratelimit,http.realip,http.reauth,http.s3browser,tls.dns.cloudflare,tls.dns.digitalocean,tls.dns.namecheap&license=personal&telemetry=off
-        unzip caddy-windows.zip
-      workingDirectory: '/tmp'
+        curl https://getcaddy.com | bash -s personal docker,http.cache,http.locale,http.minify,http.prometheus,http.proxyprotocol,http.ratelimit,http.realip,http.reauth,http.s3browser,tls.dns.cloudflare,tls.dns.digitalocean,tls.dns.namecheap
 
     - task: PublishBuildArtifacts@1
       inputs:
         artifactName: binaries
-        pathtoPublish: '/tmp'
+        pathtoPublish: 'C:/'
