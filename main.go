@@ -25,6 +25,7 @@ import(
 	_ "github.com/captncraig/caddy-realip"
 	_ "github.com/freman/caddy-reauth"
 	_ "github.com/techknowlogick/caddy-s3browser"
+	_ "github.com/gamalan/caddy-tlsredis"
 
 	"github.com/caddyserver/caddy/caddy/caddymain"
 )

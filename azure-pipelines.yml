@@ -1,7 +1,7 @@
 variables:
   dockerId: gamalan  
   imageName: caddy-docker
-  version: 0.1.0
+  version: experimental
 
 jobs:
 - job: Build_Binaries
@@ -57,7 +57,7 @@ jobs:
       docker login -u $(dockerId) -p $(dockerPassword)
       docker push $(dockerId)/$(imageName):$(version)
       docker push $(dockerId)/$(imageName):$(version)-alpine
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/experimental'))
     displayName: 'Push images'
 
 - job: Build_Images_Windows
@@ -77,5 +77,5 @@ jobs:
   - bash: |
       docker login -u $(dockerId) -p $(dockerPassword)
       docker push $(dockerId)/$(imageName):$(version)-nanoserver
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/experimental'))
     displayName: 'Push images'
