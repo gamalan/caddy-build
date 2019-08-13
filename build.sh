@@ -5,7 +5,7 @@ set -e
 echo ==PARAMETERS==
 echo ARTIFACTS: "${ARTIFACTS:=./artifacts}"
 
-go vet $(go list ./... | grep -v vendor)
+time go vet $(go list ./... | grep -v vendor)
 go test -race -v $(go list ./... | grep -v vendor)
 
 CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o ${ARTIFACTS}/binaries/linux/amd64/caddy
