@@ -50,6 +50,7 @@ jobs:
       artifactName: binaries
 
   - script: |
+      chmod +x artifacts/binaries/linux/amd64/caddy
       docker build -t $(dockerId)/$(imageName):$(version) -f Dockerfile .
       docker build -t $(dockerId)/$(imageName):$(version)-alpine -f Dockerfile-alpine .
     displayName: 'Build images'
