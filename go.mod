@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/abiosoft/caddy-git v0.0.0-20190703061829-f8cc2f20c9e7
-	github.com/caddyserver/caddy v1.0.2
+	github.com/caddyserver/caddy v1.0.3
 	github.com/caddyserver/dnsproviders v0.3.0
 	github.com/captncraig/caddy-realip v0.0.0-20190710144553-6df827e22ab8
 	github.com/epicagency/caddy-expires v1.1.1
