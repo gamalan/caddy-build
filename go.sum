@@ -71,6 +71,8 @@ github.com/caddyserver/caddy v1.0.1 h1:oor6ep+8NoJOabpFXhvjqjfeldtw1XSzfISVrbfqT
 github.com/caddyserver/caddy v1.0.1/go.mod h1:G+ouvOY32gENkJC+jhgl62TyhvqEsFaDiZ4uw0RzP1E=
 github.com/caddyserver/caddy v1.0.2 h1:NVJyvnjyBt8ToccyeiXX8PrgLJjTXWmm+uQ0otUelTo=
 github.com/caddyserver/caddy v1.0.2/go.mod h1:G+ouvOY32gENkJC+jhgl62TyhvqEsFaDiZ4uw0RzP1E=
+github.com/caddyserver/caddy v1.0.3 h1:i9gRhBgvc5ifchwWtSe7pDpsdS9+Q0Rw9oYQmYUTw1w=
+github.com/caddyserver/caddy v1.0.3/go.mod h1:G+ouvOY32gENkJC+jhgl62TyhvqEsFaDiZ4uw0RzP1E=
 github.com/caddyserver/dnsproviders v0.1.4/go.mod h1:pywDzCCTISuR/C779gOxfHRqg67i/gGdDmrZHEgtSVk=
 github.com/caddyserver/dnsproviders v0.3.0 h1:S5sw8ueeL9VJZhvaIlJWCaWPh7AH0JvLleNU8q5u3eI=
 github.com/caddyserver/dnsproviders v0.3.0/go.mod h1:a0hPI5SHyenD51xjekBZ50bxCX8CbFbh6V/wf/wjdGc=
