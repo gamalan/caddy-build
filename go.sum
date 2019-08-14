@@ -132,6 +132,8 @@ github.com/gamalan/caddy-tlsredis v0.0.0-20190812070747-272f723f09cd h1:nUTvoCnS
 github.com/gamalan/caddy-tlsredis v0.0.0-20190812070747-272f723f09cd/go.mod h1:Uc/biEBjYl6Uuka9rBBq7eL4KOFpXU5JvH4a+DozVx4=
 github.com/gamalan/caddy-tlsredis v0.0.0-20190812074341-1d28064d2f8a h1:9wTDNtrvwaO+JY+b5klWE9L9mjhaaWefTT/ye1DHXl4=
 github.com/gamalan/caddy-tlsredis v0.0.0-20190812074341-1d28064d2f8a/go.mod h1:Uc/biEBjYl6Uuka9rBBq7eL4KOFpXU5JvH4a+DozVx4=
+github.com/gamalan/caddy-tlsredis v0.1.1 h1:jxrEffd1FpK/IgPdQvlZmsTHAZD5uqp9DW0KE0UP27k=
+github.com/gamalan/caddy-tlsredis v0.1.1/go.mod h1:Uc/biEBjYl6Uuka9rBBq7eL4KOFpXU5JvH4a+DozVx4=
 github.com/gernest/wow v0.1.0/go.mod h1:dEPabJRi5BneI1Nev1VWo0ZlcTWibHWp43qxKms4elY=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/gliderlabs/ssh v0.1.1/go.mod h1:U7qILu1NlMHj9FlMhZLlkCdDnU1DBEAqr0aevW3Awn0=
