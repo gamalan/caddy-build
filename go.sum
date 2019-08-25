@@ -152,6 +152,8 @@ github.com/gamalan/caddy-tlsredis v0.1.1 h1:jxrEffd1FpK/IgPdQvlZmsTHAZD5uqp9DW0K
 github.com/gamalan/caddy-tlsredis v0.1.1/go.mod h1:Uc/biEBjYl6Uuka9rBBq7eL4KOFpXU5JvH4a+DozVx4=
 github.com/gamalan/loginsrv v1.3.2-0.20190825033700-50b41b1f810d h1:ajk8+/YlR4d7XKdkUqzyWhCaviJ2MYkixf5zMeCAXJY=
 github.com/gamalan/loginsrv v1.3.2-0.20190825033700-50b41b1f810d/go.mod h1:UXuYIEDZbf521i4yME4mevDNcnxTfZXoGnhbgwbXtZk=
+github.com/gamalan/loginsrv v1.3.2-0.20190825051327-274b9fab2c70 h1:928DuaPQaUE7xsnv35zkCtQAGD6mInAnGpxBgAnXrqU=
+github.com/gamalan/loginsrv v1.3.2-0.20190825051327-274b9fab2c70/go.mod h1:cYKfu8bz2sEW+/IdTzCqCSS7c2iGU5Hi9/bvjlMHtyM=
 github.com/gernest/wow v0.1.0/go.mod h1:dEPabJRi5BneI1Nev1VWo0ZlcTWibHWp43qxKms4elY=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/gliderlabs/ssh v0.1.1/go.mod h1:U7qILu1NlMHj9FlMhZLlkCdDnU1DBEAqr0aevW3Awn0=
@@ -198,6 +200,7 @@ github.com/googleapis/gax-go/v2 v2.0.3/go.mod h1:LLvjysVCY1JZeum8Z6l8qUty8fiNwE0
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
 github.com/gorilla/context v1.1.1/go.mod h1:kBGZzfjB9CEq2AlWe17Uuf7NDRt0dE0s8S51q0aT7Yg=
 github.com/gorilla/mux v1.6.2/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
+github.com/gorilla/mux v1.7.1 h1:Dw4jY2nghMMRsh1ol8dv1axHkDwMQK2DHerMNJsIpJU=
 github.com/gorilla/mux v1.7.1/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
 github.com/gorilla/websocket v1.4.0 h1:WDFjx/TMzVgy9VdMMQi2K2Emtwi2QcUQsztZ/zLaH/Q=
 github.com/gorilla/websocket v1.4.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
