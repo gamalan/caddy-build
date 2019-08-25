@@ -14,6 +14,8 @@ require (
 	github.com/hacdias/caddy-minify v1.0.2
 	github.com/miekg/caddy-prometheus v0.0.0-20190709133612-1fe4cb19becd
 	github.com/nicolasazrak/caddy-cache v0.3.4
+	github.com/pteich/caddy-tlsconsul v0.0.0-20190709201921-ebc221e392e1
+	github.com/tarent/loginsrv v1.3.1
 	github.com/techknowlogick/caddy-s3browser v0.0.0-20190806030829-f6605b39579a
 	github.com/xuqingfeng/caddy-rate-limit v1.6.4
 )
