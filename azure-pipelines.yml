@@ -1,7 +1,7 @@
 variables:
   dockerId: gamalan  
   imageName: caddy-docker
-  version: 1.0.2
+  version: 1.0.3
 
 jobs:
 - job: Build_Binaries
