@@ -3,6 +3,7 @@ module github.com/gamalan/caddy-build
 go 1.12
 
 require (
+	github.com/BTBurke/caddy-jwt v3.7.1+incompatible
 	github.com/abiosoft/caddy-git v0.0.0-20190703061829-f8cc2f20c9e7
 	github.com/caddyserver/caddy v1.0.3
 	github.com/caddyserver/dnsproviders v0.3.0

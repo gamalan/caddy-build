@@ -1,6 +1,6 @@
 package main
 
-import(
+import (
 	"flag"
 	"os"
 	"regexp"
@@ -16,18 +16,19 @@ import(
 	_ "github.com/caddyserver/dnsproviders/namecheap"
 
 	// Plugins
-	_ "github.com/nicolasazrak/caddy-cache"
-	_ "github.com/epicagency/caddy-expires"
+	_ "github.com/BTBurke/caddy-jwt"
 	_ "github.com/abiosoft/caddy-git"
+	_ "github.com/captncraig/caddy-realip"
+	_ "github.com/epicagency/caddy-expires"
+	_ "github.com/freman/caddy-reauth"
+	_ "github.com/gamalan/caddy-tlsredis"
 	_ "github.com/hacdias/caddy-minify"
 	_ "github.com/miekg/caddy-prometheus"
-	_ "github.com/xuqingfeng/caddy-rate-limit"
-	_ "github.com/captncraig/caddy-realip"
-	_ "github.com/freman/caddy-reauth"
-	_ "github.com/techknowlogick/caddy-s3browser"
-	_ "github.com/gamalan/caddy-tlsredis"
-	_ "github.com/tarent/loginsrv/caddy"
+	_ "github.com/nicolasazrak/caddy-cache"
 	_ "github.com/pteich/caddy-tlsconsul"
+	_ "github.com/tarent/loginsrv/caddy"
+	_ "github.com/techknowlogick/caddy-s3browser"
+	_ "github.com/xuqingfeng/caddy-rate-limit"
 
 	"github.com/caddyserver/caddy/caddy/caddymain"
 )
