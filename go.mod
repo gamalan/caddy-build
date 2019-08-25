@@ -10,9 +10,9 @@ require (
 	github.com/captncraig/caddy-realip v0.0.0-20190710144553-6df827e22ab8
 	github.com/epicagency/caddy-expires v1.1.1
 	github.com/freman/caddy-reauth v0.0.0-20190703014110-860404f878d8
-	github.com/gamalan/caddy-docker-proxy v0.3.1-0.20190810075619-d84552ec09d1
 	github.com/gamalan/caddy-tlsredis v0.1.1
 	github.com/hacdias/caddy-minify v1.0.2
+	github.com/lucaslorentz/caddy-docker-proxy v0.3.1
 	github.com/miekg/caddy-prometheus v0.0.0-20190709133612-1fe4cb19becd
 	github.com/nicolasazrak/caddy-cache v0.3.4
 	github.com/pteich/caddy-tlsconsul v0.0.0-20190709201921-ebc221e392e1
@@ -23,6 +23,7 @@ require (
 	github.com/xuqingfeng/caddy-rate-limit v1.6.4
 )
 
-replace github.com/h2non/gock => gopkg.in/h2non/gock.v1 v1.0.14
-
-replace github.com/tarent/loginsrv => github.com/gamalan/loginsrv v1.3.2-0.20190825053956-8c5eaaf7f554
+replace (
+	github.com/h2non/gock => gopkg.in/h2non/gock.v1 v1.0.14
+	github.com/tarent/loginsrv => github.com/gamalan/loginsrv v1.3.2-0.20190825053956-8c5eaaf7f554
+)
