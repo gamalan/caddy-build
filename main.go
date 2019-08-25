@@ -6,7 +6,7 @@ import (
 	"regexp"
 
 	// Docker loader
-	_ "github.com/gamalan/caddy-docker-proxy/plugin"
+	_ "github.com/lucaslorentz/caddy-docker-proxy/plugin"
 
 	// DNS Plugins
 	_ "github.com/caddyserver/dnsproviders/azure"
