@@ -15,12 +15,16 @@ require (
 	github.com/lucaslorentz/caddy-docker-proxy v0.3.1
 	github.com/miekg/caddy-prometheus v0.0.0-20190709133612-1fe4cb19becd
 	github.com/nicolasazrak/caddy-cache v0.3.4
+	github.com/payintech/caddy-datadog v0.0.0-20190812115610-44482c4c027a
+	github.com/philhofer/fwd v1.0.0 // indirect
 	github.com/pteich/caddy-tlsconsul v0.0.0-20190709201921-ebc221e392e1
 	github.com/tarent/lib-compose v0.0.0-20170829113806-69430f91d1d6 // indirect
 	github.com/tarent/loginsrv v1.3.1
 	github.com/tarent/logrus v0.11.5 // indirect
 	github.com/techknowlogick/caddy-s3browser v0.0.0-20190806030829-f6605b39579a
+	github.com/tinylib/msgp v1.1.0 // indirect
 	github.com/xuqingfeng/caddy-rate-limit v1.6.4
+	gopkg.in/DataDog/dd-trace-go.v1 v1.17.0 // indirect
 )
 
 replace (
