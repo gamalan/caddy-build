@@ -25,6 +25,7 @@ import (
 	_ "github.com/hacdias/caddy-minify"
 	_ "github.com/miekg/caddy-prometheus"
 	_ "github.com/nicolasazrak/caddy-cache"
+	_ "github.com/payintech/caddy-datadog"
 	_ "github.com/pteich/caddy-tlsconsul"
 	_ "github.com/tarent/loginsrv/caddy"
 	_ "github.com/techknowlogick/caddy-s3browser"
