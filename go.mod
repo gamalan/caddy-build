@@ -30,4 +30,5 @@ require (
 replace (
 	github.com/h2non/gock => gopkg.in/h2non/gock.v1 v1.0.14
 	github.com/tarent/loginsrv => github.com/gamalan/loginsrv v1.3.2-0.20190825053956-8c5eaaf7f554
+	git.apache.org/thrift.git => github.com/apache/thrift v0.0.0-20180902110319-2566ecd5d999
 )
