@@ -30,6 +30,7 @@ import (
 	_ "github.com/tarent/loginsrv/caddy"
 	_ "github.com/techknowlogick/caddy-s3browser"
 	_ "github.com/xuqingfeng/caddy-rate-limit"
+	_ "github.com/captncraig/caddy-realip"
 
 	"github.com/caddyserver/caddy/caddy/caddymain"
 )
