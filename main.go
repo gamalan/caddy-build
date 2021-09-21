@@ -1,56 +1,23 @@
 package main
 
 import (
-	"flag"
-	"os"
-	"regexp"
+	caddycmd "github.com/caddyserver/caddy/v2/cmd"
 
-	// Docker loader
-	_ "github.com/lucaslorentz/caddy-docker-proxy/plugin"
-
-	// DNS Plugins
-	_ "github.com/caddyserver/dnsproviders/azure"
-	_ "github.com/caddyserver/dnsproviders/cloudflare"
-	_ "github.com/caddyserver/dnsproviders/digitalocean"
-	_ "github.com/caddyserver/dnsproviders/googlecloud"
-	_ "github.com/caddyserver/dnsproviders/namecheap"
-
-	// Plugins
-	_ "github.com/BTBurke/caddy-jwt"
-	_ "github.com/abiosoft/caddy-git"
-	_ "github.com/captncraig/caddy-realip"
-	_ "github.com/epicagency/caddy-expires"
-	_ "github.com/freman/caddy-reauth"
+	// plug in Caddy modules here
+	_ "github.com/caddyserver/caddy/v2/modules/standard"
+	_ "github.com/abiosoft/caddy-exec"
+	_ "github.com/caddy-dns/cloudflare"
+	_ "github.com/greenpau/caddy-auth-jwt"
+	_ "github.com/greenpau/caddy-auth-portal"
+	_ "github.com/caddyserver/ntlm-transport"
+	_ "github.com/RussellLuo/caddy-ext/ratelimit"
+	_ "github.com/kirsch33/realip"
+	_ "github.com/porech/caddy-maxmind-geolocation"
+	_ "github.com/caddy-dns/digitalocean"
 	_ "github.com/gamalan/caddy-tlsredis"
-	_ "github.com/hacdias/caddy-minify"
-	_ "github.com/miekg/caddy-prometheus"
-	_ "github.com/nicolasazrak/caddy-cache"
-	_ "github.com/payintech/caddy-datadog"
-	_ "github.com/pteich/caddy-tlsconsul"
-	_ "github.com/tarent/loginsrv/caddy"
-	_ "github.com/techknowlogick/caddy-s3browser"
-	_ "github.com/xuqingfeng/caddy-rate-limit"
-
-	"github.com/caddyserver/caddy/caddy/caddymain"
+	_ "github.com/lucaslorentz/caddy-docker-proxy/plugin/v2"
 )
 
-var enableTelemetryFlag bool
-var isTrue = regexp.MustCompile("(?i)^(true|yes|1)$")
-
-// main build caddy with docker loader for caddy version 1.0.1
 func main() {
-	flag.BoolVar(&enableTelemetryFlag, "enable-telemetry", false, "Enable caddy telemetry")
-
-	flag.Parse()
-
-	if enableTelemetryEnv := os.Getenv("CADDY_ENABLE_TELEMETRY"); enableTelemetryEnv != "" {
-		caddymain.EnableTelemetry = isTrue.MatchString(enableTelemetryEnv)
-	} else {
-		caddymain.EnableTelemetry = enableTelemetryFlag
-	}
-
-	caddymain.Run()
-
-	// Keep caddy running after main instance is stopped
-	select {}
+	caddycmd.Main()
 }

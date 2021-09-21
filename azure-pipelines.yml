@@ -1,33 +1,22 @@
 variables:
   dockerId: gamalan  
   imageName: caddy-docker
-  version: 1.0.3
+  version: 2.0.1
 
 jobs:
 - job: Build_Binaries
   pool:
-    vmImage: 'Ubuntu 16.04'
-
-  variables:
-    GOBIN:  '$(GOPATH)/bin' # Go binaries path
-    GOROOT: '/usr/local/go1.12' # Go installation path
-    GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
-    modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
-    # TODO: modules should be the default in Go 1.13, so this won't be needed
-    GO111MODULE: on
+    vmImage: 'Ubuntu 18.04'
 
   steps:
+  - task: GoTool@0
+    inputs:
+      version: '1.17'
+      GOPATH: '$(Agent.BuildDirectory)/go'
+      GOBIN: '$(GOPATH)/bin'
   - bash: |
-      mkdir -p '$(GOBIN)'
-      mkdir -p '$(GOPATH)/pkg'
-      mkdir -p '$(modulePath)'
-      shopt -s extglob
-      mv !(gopath) '$(modulePath)'
-      echo '##vso[task.prependpath]$(GOBIN)'
-      echo '##vso[task.prependpath]$(GOROOT)/bin'
-    displayName: 'Set up the Go workspace'
-  - bash: ./build.sh
-    workingDirectory: '$(modulePath)'
+      export PATH="$GOBIN:$PATH"
+      . build.sh
     env:
       ARTIFACTS: '$(Build.ArtifactStagingDirectory)'
     displayName: Build
@@ -41,7 +30,7 @@ jobs:
 - job: Build_Images_Linux
   dependsOn: Build_Binaries
   pool:
-    vmImage: 'Ubuntu 16.04'
+    vmImage: 'Ubuntu 18.04'
   steps:
   - task: DownloadBuildArtifacts@0
     displayName: 'Download Build Artifacts'
@@ -58,13 +47,13 @@ jobs:
       docker login -u $(dockerId) -p $(dockerPassword)
       docker push $(dockerId)/$(imageName):$(version)
       docker push $(dockerId)/$(imageName):$(version)-alpine
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: succeeded()
     displayName: 'Push images'
 
 - job: Build_Images_Windows
   dependsOn: Build_Binaries
   pool:
-    vmImage: 'win1803'
+    vmImage: 'windows-2019'
   steps:
   - task: DownloadBuildArtifacts@0
     displayName: 'Download Build Artifacts'
@@ -78,5 +67,5 @@ jobs:
   - bash: |
       docker login -u $(dockerId) -p $(dockerPassword)
       docker push $(dockerId)/$(imageName):$(version)-nanoserver
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: succeeded()
     displayName: 'Push images'
