@@ -47,7 +47,7 @@ jobs:
       docker login -u $(dockerId) -p $(dockerPassword)
       docker push $(dockerId)/$(imageName):$(version)
       docker push $(dockerId)/$(imageName):$(version)-alpine
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: succeeded()
     displayName: 'Push images'
 
 - job: Build_Images_Windows
@@ -67,5 +67,5 @@ jobs:
   - bash: |
       docker login -u $(dockerId) -p $(dockerPassword)
       docker push $(dockerId)/$(imageName):$(version)-nanoserver
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: succeeded()
     displayName: 'Push images'
