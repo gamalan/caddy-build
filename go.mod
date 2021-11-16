@@ -7,7 +7,7 @@ require (
 	github.com/abiosoft/caddy-exec v0.0.0-20210526181020-06d4f7218eb8
 	github.com/caddy-dns/cloudflare v0.0.0-20210607183747-91cf700356a1
 	github.com/caddy-dns/digitalocean v0.0.0-20210809220558-ac6e4fd9e135
-	github.com/caddyserver/caddy/v2 v2.4.5
+	github.com/caddyserver/caddy/v2 v2.4.6
 	github.com/caddyserver/ntlm-transport v0.1.1
 	github.com/gamalan/caddy-tlsredis v0.2.7
 	github.com/greenpau/caddy-auth-jwt v1.3.16
